@@ -73,6 +73,20 @@ theme = ExtResource("1_mwxwu")
 script = ExtResource("2_pgx83")
 action_items = Array[String](["move_forward", "move_backward", "move_left", "move_right", "jump", "interact", "ui_accept"])
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_rlk68")
 bus = &"SFX"

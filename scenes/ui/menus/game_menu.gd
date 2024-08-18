@@ -37,7 +37,8 @@ func _on_music_slider_value_changed(value):
 func _on_sfx_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(SFX_BUS_ID, linear_to_db(value))
 	AudioServer.set_bus_mute(SFX_BUS_ID, value < .05)
-	$AudioStreamPlayer.play()
+	if self.focus_entered:
+		$AudioStreamPlayer.play()
 	if user_prefs:
 		user_prefs.sfx_audio_level = value
 		user_prefs.save()
@@ -56,6 +57,10 @@ func _on_visibility_changed():
 
 
 func _on_return_to_game_button_pressed():
+	if %DialogueBox.visible:
+		$yell.text = "PRESS F TO GO BACK INTO FOCUS"
+		if Input.is_action_just_pressed("ui_cancel"):
+			$yell.text = ""
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	game_menu.hide()

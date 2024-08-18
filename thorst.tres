@@ -14,22 +14,22 @@ starts = {
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(-480, -300),
+"offset": Vector2(-460, 0),
 "start_id": "1"
 },
 "0_2": {
 "link": &"1_4",
-"offset": Vector2(-560, 20),
+"offset": Vector2(-420, 300),
 "start_id": "can"
 },
 "0_3": {
 "link": &"1_6",
-"offset": Vector2(-740, 320),
+"offset": Vector2(-540, 620),
 "start_id": "lomp"
 },
 "0_4": {
 "link": &"1_8",
-"offset": Vector2(-1020, 420),
+"offset": Vector2(-1120, 640),
 "start_id": "9to5"
 },
 "0_5": {
@@ -39,7 +39,7 @@ nodes = {
 },
 "1_1": {
 "dialogue": "[wait]............[/wait][wait time=1]ugh.[/wait]",
-"offset": Vector2(-220, -320),
+"offset": Vector2(-200, -20),
 "options": {
 0: {
 "condition": {},
@@ -52,7 +52,7 @@ nodes = {
 },
 "1_10": {
 "dialogue": "bye.",
-"offset": Vector2(-280, -600),
+"offset": Vector2(-620, -400),
 "options": {
 0: {
 "condition": {},
@@ -65,7 +65,7 @@ nodes = {
 },
 "1_11": {
 "dialogue": "[wait]i'm a minimum wage worker working a night shift. [/wait][wait time=1]how else do you want me to act?[/wait]",
-"offset": Vector2(-280, -880),
+"offset": Vector2(-620, -680),
 "options": {
 0: {
 "condition": {},
@@ -78,7 +78,7 @@ nodes = {
 },
 "1_12": {
 "dialogue": "[wait][wave]Hello customer!!!![/wave][/wait] [wait time=1][wait speed= 4] [shake]Welcome[/shake][/wait] to your local Nine to Five!!!!",
-"offset": Vector2(40, -880),
+"offset": Vector2(-300, -680),
 "options": {
 0: {
 "condition": {},
@@ -96,7 +96,7 @@ nodes = {
 },
 "1_13": {
 "dialogue": "[wait]that's what I thought.[/wait] [wait time=1] go be a glutton and grab your grubby snacks. [/wait]",
-"offset": Vector2(360, -900),
+"offset": Vector2(40, -720),
 "options": {
 0: {
 "condition": {},
@@ -109,7 +109,7 @@ nodes = {
 },
 "1_14": {
 "dialogue": "[wait]i'm not paid enough to get mad at you.[/wait][wait time=1] go get your snacks fatty.[/wait]",
-"offset": Vector2(380, -620),
+"offset": Vector2(40, -420),
 "options": {
 0: {
 "condition": {},
@@ -122,7 +122,7 @@ nodes = {
 },
 "1_15": {
 "dialogue": "liquid machine broke.",
-"offset": Vector2(-260, -1240),
+"offset": Vector2(-300, -1060),
 "options": {
 0: {
 "condition": {},
@@ -140,7 +140,7 @@ nodes = {
 },
 "1_16": {
 "dialogue": "go be stupid somewhere else.",
-"offset": Vector2(460, -1300),
+"offset": Vector2(420, -1100),
 "options": {
 0: {
 "condition": {},
@@ -153,7 +153,7 @@ nodes = {
 },
 "1_17": {
 "dialogue": "you too.",
-"offset": Vector2(680, -1000),
+"offset": Vector2(420, -820),
 "options": {
 0: {
 "condition": {},
@@ -166,7 +166,7 @@ nodes = {
 },
 "1_18": {
 "dialogue": "[wait]we ain't got no liquids.[/wait] [wait time=1] simple as that.[/wait]",
-"offset": Vector2(60, -1440),
+"offset": Vector2(60, -1380),
 "options": {
 0: {
 "condition": {},
@@ -179,7 +179,7 @@ nodes = {
 },
 "1_19": {
 "dialogue": "[wait]but im[/wait] [wait speed = 4]sooooooooooooooooooo [/wait]thirsty...",
-"offset": Vector2(400, -1600),
+"offset": Vector2(400, -1380),
 "options": {
 0: {
 "condition": {},
@@ -192,7 +192,7 @@ nodes = {
 },
 "1_2": {
 "dialogue": "im really thirsty.",
-"offset": Vector2(100, -320),
+"offset": Vector2(120, -20),
 "options": {
 0: {
 "condition": {},
@@ -205,7 +205,7 @@ nodes = {
 },
 "1_20": {
 "dialogue": "[wait]too bad.[/wait] [wait time=1]we restock [u]tomorrow.[/u][/wait]",
-"offset": Vector2(740, -1600),
+"offset": Vector2(740, -1380),
 "options": {
 0: {
 "condition": {},
@@ -218,7 +218,7 @@ nodes = {
 },
 "1_21": {
 "dialogue": "ok... :(",
-"offset": Vector2(1100, -1600),
+"offset": Vector2(1080, -1380),
 "options": {
 0: {
 "condition": {},
@@ -231,7 +231,7 @@ nodes = {
 },
 "1_22": {
 "dialogue": "[wait]actually...[/wait][wait time=1] it's 10:43pm right now.[/wait]",
-"offset": Vector2(1440, -1600),
+"offset": Vector2(1400, -1380),
 "options": {
 0: {
 "condition": {},
@@ -244,7 +244,7 @@ nodes = {
 },
 "1_23": {
 "dialogue": "if I just wait a [u]liiiiiiitle[/u] longer, they should restock!",
-"offset": Vector2(1760, -1600),
+"offset": Vector2(1720, -1380),
 "options": {
 0: {
 "condition": {},
@@ -257,7 +257,7 @@ nodes = {
 },
 "1_24": {
 "dialogue": "[wait]fresh liquid just came in.[/wait][wait time=1] go wild. [/wait]",
-"offset": Vector2(-300, -1560),
+"offset": Vector2(-320, -1840),
 "options": {
 0: {
 "condition": {},
@@ -270,7 +270,7 @@ nodes = {
 },
 "1_25": {
 "dialogue": "[shake]WOOOOOOOOOO[/shake]",
-"offset": Vector2(60, -1720),
+"offset": Vector2(0, -1840),
 "options": {
 0: {
 "condition": {},
@@ -283,7 +283,7 @@ nodes = {
 },
 "1_3": {
 "dialogue": "i should get something to drink.",
-"offset": Vector2(420, -320),
+"offset": Vector2(440, -20),
 "options": {
 0: {
 "condition": {},
@@ -296,7 +296,7 @@ nodes = {
 },
 "1_4": {
 "dialogue": "[wait speed=4]............[/wait][wait time=3]im still thirsty.[/wait]",
-"offset": Vector2(-280, 40),
+"offset": Vector2(-220, 300),
 "options": {
 0: {
 "condition": {},
@@ -309,7 +309,7 @@ nodes = {
 },
 "1_5": {
 "dialogue": "i need more liquids.",
-"offset": Vector2(77.5727, 63.1453),
+"offset": Vector2(100, 300),
 "options": {
 0: {
 "condition": {},
@@ -322,7 +322,7 @@ nodes = {
 },
 "1_6": {
 "dialogue": "cant drink tree.....",
-"offset": Vector2(-305.864, 554.3),
+"offset": Vector2(-340, 620),
 "options": {
 0: {
 "condition": {},
@@ -335,7 +335,7 @@ nodes = {
 },
 "1_7": {
 "dialogue": "solids are undrinkable.",
-"offset": Vector2(129.838, 575.518),
+"offset": Vector2(-20, 620),
 "options": {
 0: {
 "condition": {},
@@ -348,7 +348,7 @@ nodes = {
 },
 "1_8": {
 "dialogue": "holy shit [color=green]9 to 5 [/color]",
-"offset": Vector2(-776.95, 566.17),
+"offset": Vector2(-900, 620),
 "options": {
 0: {
 "condition": {},
@@ -384,28 +384,28 @@ nodes = {
 },
 "2_1": {
 "comment": "",
-"offset": Vector2(-500, -160),
+"offset": Vector2(-460, 120),
 "size": Vector2(200, 100)
 },
 "4_1": {
 "link": "END",
-"offset": Vector2(769.514, -422.572),
+"offset": Vector2(360, -420),
 "type": 0,
 "value": "1",
 "variable": "mood"
 },
 "5_1": {
 "false": &"1_17",
-"offset": Vector2(120, -1140),
-"operator": 4,
+"offset": Vector2(80, -960),
+"operator": 0,
 "true": &"1_16",
 "value1": "mood",
 "value2": "1"
 },
 "5_2": {
 "false": &"1_15",
-"offset": Vector2(-640, -1200),
-"operator": 4,
+"offset": Vector2(-680, -1200),
+"operator": 0,
 "true": &"1_24",
 "value1": "stock",
 "value2": "1"
