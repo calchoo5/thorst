@@ -51,6 +51,7 @@ place=""
 drink="drinkable item"
 undrinkable=""
 huh=""
+explosive=""
 
 [input]
 
