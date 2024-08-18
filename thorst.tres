@@ -321,7 +321,7 @@ nodes = {
 "speaker": "Me"
 },
 "1_6": {
-"dialogue": "cant drink lomp.....",
+"dialogue": "cant drink tree.....",
 "offset": Vector2(-305.864, 554.3),
 "options": {
 0: {
