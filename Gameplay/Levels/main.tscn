@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b7lhv8xg686bq" path="res://assets/9to5glbv/9to5_Part37_diff.png" id="15_ugtor"]
 [ext_resource type="Texture2D" uid="uid://bvxqpjqrrprok" path="res://assets/9to5glbv/9to5_Part42_diff.png" id="16_ngq68"]
 [ext_resource type="Texture2D" uid="uid://48ycnesf6rta" path="res://assets/9to5glbv/9to5_Part54_diff.png" id="17_w81e1"]
+[ext_resource type="ArrayMesh" uid="uid://didfvqjj1g8sm" path="res://assets/9to5glbv/boom v1.obj" id="18_vj1cv"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_0pm1u"]
 script = ExtResource("6_ncv70")
@@ -807,6 +808,9 @@ height = 0.1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_w02c6"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_okivt"]
+size = Vector3(30, 40.9301, 23.732)
+
 [node name="main" type="Node3D"]
 process_mode = 1
 script = ExtResource("1_hhfgx")
@@ -1017,3 +1021,14 @@ mesh = SubResource("SphereMesh_udrx0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cashier/interactarea"]
 shape = SubResource("CapsuleShape3D_w02c6")
+
+[node name="dynamite" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.015, 0, 0, 0, -6.55671e-10, 0.015, 0, -0.015, -6.55671e-10, -0.535527, 1.80091, -16.4767)
+mesh = ExtResource("18_vj1cv")
+skeleton = NodePath("../can")
+
+[node name="interactarea" parent="dynamite" groups=["explosive", "interactable"] instance=ExtResource("2_dm7o0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="dynamite/interactarea"]
+transform = Transform3D(1, 0, 0, 0, 1, 5.57776e-13, 0, -5.57776e-13, 1, 0, -14.9144, -3.134)
+shape = SubResource("BoxShape3D_okivt")

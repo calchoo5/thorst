@@ -9,6 +9,7 @@ starts = {
 "9to5": &"0_4",
 "can": &"0_2",
 "cashier": &"0_5",
+"dynamite": &"0_6",
 "lomp": &"0_3"
 }
 nodes = {
@@ -36,6 +37,11 @@ nodes = {
 "link": &"1_9",
 "offset": Vector2(-1240, -840),
 "start_id": "cashier"
+},
+"0_6": {
+"link": &"1_26",
+"offset": Vector2(-1068.96, 915.787),
+"start_id": "dynamite"
 },
 "1_1": {
 "dialogue": "[wait]............[/wait][wait time=1]ugh.[/wait]",
@@ -271,6 +277,19 @@ nodes = {
 "1_25": {
 "dialogue": "[shake]WOOOOOOOOOO[/shake]",
 "offset": Vector2(0, -1840),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_26": {
+"dialogue": "oh [color=red]fUCK[/color]",
+"offset": Vector2(-746.955, 979.787),
 "options": {
 0: {
 "condition": {},

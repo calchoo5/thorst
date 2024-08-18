@@ -6,6 +6,7 @@ var addedHead: bool = false
 @onready var game_menu: Control = $GameMenu
 
 var fart = load("res://assets/audio/sfx/gogogogo.ogg")
+var die = load("res://assets/audio/sfx/snd_badexplosion_ch1.wav")
 
 signal interacting
 
@@ -108,6 +109,8 @@ func _process(delta) -> void:
 				$gui/interacting.text = "drink"
 			if thing.is_in_group("undrinkable"):
 				$gui/interacting.text = "drink"
+			if thing.is_in_group("explosive"):
+				$gui/interacting.text = "kill yourself"
 			if thing.is_in_group("huh"):
 				$gui/interacting.text = "?"
 	else:
@@ -150,6 +153,10 @@ func _input(event: InputEvent) -> void:
 				if thing.is_in_group("drink"):
 					$sfxplayer.set_stream(fart)
 					$sfxplayer.play()
+				if thing.is_in_group("explosive"):
+					$sfxplayer.set_stream(die)
+					$sfxplayer.play()
+					get_tree().change_scene_to_file("res://scenes/game.tscn")
 				thing.interact()
 				await $sfxplayer.finished
 				$sfxplayer.set_stream(null)
