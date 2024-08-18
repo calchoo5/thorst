@@ -1,0 +1,425 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://doov7h1mc6f6a"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_ilgfu"]
+
+[resource]
+script = ExtResource("1_ilgfu")
+starts = {
+"1": &"0_1",
+"9to5": &"0_4",
+"can": &"0_2",
+"cashier": &"0_5",
+"lomp": &"0_3"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-480, -300),
+"start_id": "1"
+},
+"0_2": {
+"link": &"1_4",
+"offset": Vector2(-560, 20),
+"start_id": "can"
+},
+"0_3": {
+"link": &"1_6",
+"offset": Vector2(-740, 320),
+"start_id": "lomp"
+},
+"0_4": {
+"link": &"1_8",
+"offset": Vector2(-1020, 420),
+"start_id": "9to5"
+},
+"0_5": {
+"link": &"1_9",
+"offset": Vector2(-1240, -840),
+"start_id": "cashier"
+},
+"1_1": {
+"dialogue": "[wait]............[/wait][wait time=1]ugh.[/wait]",
+"offset": Vector2(-220, -320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_10": {
+"dialogue": "bye.",
+"offset": Vector2(-280, -600),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_11": {
+"dialogue": "[wait]i'm a minimum wage worker working a night shift. [/wait][wait time=1]how else do you want me to act?[/wait]",
+"offset": Vector2(-280, -880),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_12": {
+"dialogue": "[wait][wave]Hello customer!!!![/wave][/wait] [wait time=1][wait speed= 4] [shake]Welcome[/shake][/wait] to your local Nine to Five!!!!",
+"offset": Vector2(40, -880),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": "oh god stop"
+},
+1: {
+"condition": {},
+"link": &"1_14",
+"text": "that's better."
+}
+},
+"size": Vector2(300, 289),
+"speaker": "Cashier"
+},
+"1_13": {
+"dialogue": "[wait]that's what I thought.[/wait] [wait time=1] go be a glutton and grab your grubby snacks. [/wait]",
+"offset": Vector2(360, -900),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_14": {
+"dialogue": "[wait]i'm not paid enough to get mad at you.[/wait][wait time=1] go get your snacks fatty.[/wait]",
+"offset": Vector2(380, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"4_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_15": {
+"dialogue": "liquid machine broke.",
+"offset": Vector2(-260, -1240),
+"options": {
+0: {
+"condition": {},
+"link": &"1_18",
+"text": "what does that even mean?"
+},
+1: {
+"condition": {},
+"link": &"5_1",
+"text": "understandable, have a nice day."
+}
+},
+"size": Vector2(300, 289),
+"speaker": "Cashier"
+},
+"1_16": {
+"dialogue": "go be stupid somewhere else.",
+"offset": Vector2(460, -1300),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_17": {
+"dialogue": "you too.",
+"offset": Vector2(680, -1000),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_18": {
+"dialogue": "[wait]we ain't got no liquids.[/wait] [wait time=1] simple as that.[/wait]",
+"offset": Vector2(60, -1440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_19",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_19": {
+"dialogue": "[wait]but im[/wait] [wait speed = 4]sooooooooooooooooooo [/wait]thirsty...",
+"offset": Vector2(400, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_20",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_2": {
+"dialogue": "im really thirsty.",
+"offset": Vector2(100, -320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_20": {
+"dialogue": "[wait]too bad.[/wait] [wait time=1]we restock [u]tomorrow.[/u][/wait]",
+"offset": Vector2(740, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_21",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_21": {
+"dialogue": "ok... :(",
+"offset": Vector2(1100, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_22",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_22": {
+"dialogue": "[wait]actually...[/wait][wait time=1] it's 10:43pm right now.[/wait]",
+"offset": Vector2(1440, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_23",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me (inner thoughts)"
+},
+"1_23": {
+"dialogue": "if I just wait a [u]liiiiiiitle[/u] longer, they should restock!",
+"offset": Vector2(1760, -1600),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me (inner thoughts)"
+},
+"1_24": {
+"dialogue": "[wait]fresh liquid just came in.[/wait][wait time=1] go wild. [/wait]",
+"offset": Vector2(-300, -1560),
+"options": {
+0: {
+"condition": {},
+"link": &"1_25",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Cashier"
+},
+"1_25": {
+"dialogue": "[shake]WOOOOOOOOOO[/shake]",
+"offset": Vector2(60, -1720),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_3": {
+"dialogue": "i should get something to drink.",
+"offset": Vector2(420, -320),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_4": {
+"dialogue": "[wait speed=4]............[/wait][wait time=3]im still thirsty.[/wait]",
+"offset": Vector2(-280, 40),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_5": {
+"dialogue": "i need more liquids.",
+"offset": Vector2(77.5727, 63.1453),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_6": {
+"dialogue": "cant drink lomp.....",
+"offset": Vector2(-305.864, 554.3),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_7": {
+"dialogue": "solids are undrinkable.",
+"offset": Vector2(129.838, 575.518),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_8": {
+"dialogue": "holy shit [color=green]9 to 5 [/color]",
+"offset": Vector2(-776.95, 566.17),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Me"
+},
+"1_9": {
+"dialogue": "what do you want.",
+"offset": Vector2(-1000, -1040),
+"options": {
+0: {
+"condition": {},
+"link": &"5_2",
+"text": "where are the liquids?"
+},
+1: {
+"condition": {},
+"link": &"1_11",
+"text": "what's with the attitude?"
+},
+2: {
+"condition": {},
+"link": &"1_10",
+"text": "see ya."
+}
+},
+"size": Vector2(300, 322),
+"speaker": "Cashier"
+},
+"2_1": {
+"comment": "",
+"offset": Vector2(-500, -160),
+"size": Vector2(200, 100)
+},
+"4_1": {
+"link": "END",
+"offset": Vector2(769.514, -422.572),
+"type": 0,
+"value": "1",
+"variable": "mood"
+},
+"5_1": {
+"false": &"1_17",
+"offset": Vector2(120, -1140),
+"operator": 4,
+"true": &"1_16",
+"value1": "mood",
+"value2": "1"
+},
+"5_2": {
+"false": &"1_15",
+"offset": Vector2(-640, -1200),
+"operator": 4,
+"true": &"1_24",
+"value1": "stock",
+"value2": "1"
+}
+}
+variables = {
+"mood": {
+"type": 2,
+"value": 0
+},
+"stock": {
+"type": 2,
+"value": 0
+}
+}
+strays = Array[String](["2_1"])
+characters = "Me"

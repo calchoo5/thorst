@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn0b0jopb5yp6"]
+
+[ext_resource type="Script" path="res://scenes/interactarea.gd" id="1_mtgi5"]
+
+[node name="interactarea" type="StaticBody3D"]
+script = ExtResource("1_mtgi5")

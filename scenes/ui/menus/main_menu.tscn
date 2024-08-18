@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://ossrp4y0wtt2"]
+
+[ext_resource type="Theme" uid="uid://65dakj0ukuj6" path="res://assets/themes/default_theme.tres" id="1_hgrl0"]
+[ext_resource type="Script" path="res://scenes/ui/menus/main_menu.gd" id="2_kc8p2"]
+[ext_resource type="FontFile" uid="uid://bohaobj5k76ce" path="res://assets/DraftingMono/ttf/DraftingMono-Regular.ttf" id="3_febhv"]
+[ext_resource type="FontFile" uid="uid://d3j2rt0wj13m1" path="res://assets/DraftingMono/ttf/DraftingMono-Bold.ttf" id="4_e4tfg"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hgrl0")
+script = ExtResource("2_kc8p2")
+
+[node name="TextureRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_spacing = -30
+theme_override_fonts/font = ExtResource("3_febhv")
+theme_override_font_sizes/font_size = 35
+text = " im really thirsty.
+ ___________________"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+ 
+ "
+horizontal_alignment = 1
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="StartGameButton" type="Button" parent="VBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../QuitGameButton")
+focus_previous = NodePath("../QuitGameButton")
+theme_override_fonts/font = ExtResource("4_e4tfg")
+theme_override_font_sizes/font_size = 20
+text = "Start Game"
+
+[node name="QuitGameButton" type="Button" parent="VBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../StartGameButton")
+focus_next = NodePath("../StartGameButton")
+theme_override_fonts/font = ExtResource("4_e4tfg")
+theme_override_font_sizes/font_size = 20
+text = "Exit"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="VBoxContainer/ButtonsVBox/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonsVBox/QuitGameButton" to="." method="_on_quit_button_pressed"]

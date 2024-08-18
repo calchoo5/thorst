@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnwaf2m5ngyfs"]
+
+[ext_resource type="Script" path="res://Gameplay/Player/basic_player_startup.gd" id="1_sot23"]
+[ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://Gameplay/Player/basic_player_head.tscn" id="2_0xldj"]
+[ext_resource type="Texture2D" uid="uid://cxfkenwpi80y5" path="res://assets/crosshair.png" id="2_xp17x"]
+[ext_resource type="PackedScene" uid="uid://daxygoynvdyya" path="res://scenes/ui/menus/game_menu.tscn" id="3_4ndcx"]
+[ext_resource type="Theme" uid="uid://65dakj0ukuj6" path="res://assets/themes/default_theme.tres" id="3_qxpbl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_li7ud"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c3np0"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_sot23")
+JUMP_VELOCITY = 5.0
+
+[node name="crosshair" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_xp17x")
+
+[node name="gui" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="gui"]
+layout_mode = 2
+text = "
+ 
+ 
+"
+
+[node name="interacting" type="Label" parent="gui"]
+layout_mode = 2
+theme = ExtResource("3_qxpbl")
+horizontal_alignment = 1
+
+[node name="Head" parent="." instance=ExtResource("2_0xldj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500544, 0)
+script = null
+
+[node name="interactray" type="RayCast3D" parent="Head"]
+transform = Transform3D(1.91069e-15, 6.55671e-08, 1, 1, -6.55671e-08, -3.67048e-21, 4.37114e-08, 1.5, -4.37114e-08, 0, 0.0153604, 0)
+collision_mask = 3
+collide_with_areas = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_li7ud")
+
+[node name="GameMenu" parent="." instance=ExtResource("3_4ndcx")]
+visible = false
+
+[node name="sfxplayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_c3np0")
